@@ -207,13 +207,124 @@ class Main {
 
     if(input == 0)
     {
-        System.out.println("Program ended. Have a nice day!")
+        System.out.println("Program ended. Have a nice day!");
     }
 
+//__________________________________________________________________//
+
+    if(input == 1) // lowercase letter passwords
+    { 
+
+      String[] tempArrayLC = new String[125];
+      
+      for(int i = 0 ; i < tempArrayLC.length ; i ++)
+      {
+        tempArrayLC[i] = lower[i] + lower[i*2] + lower[i*3] + lower[i * 4] + lower[i * 4] + lower[i * 5] + lower[i * 6] + lower[i * 7] ;
+      } 
+   
+    File fileName1 = new File("Lowerpw.txt"); 
+    PrintWriter outFile1 = new PrintWriter(fileName1); // makes one new file
+
+    for (int loop = 0; loop < tempArrayLC.length ; loop++) 
+    {
+      outFile1.println(tempArrayLC[loop]);
+    } // end for loop
+
+    outFile1.close(); // close the file when finished
+
+    }
+
+  //__________________________________________________________________//
+
+   if(input == 2) // uppercase letter passwords
+    { 
+
+      String[] tempArrayUC = new String[125];
+      
+      for(int i = 0 ; i < tempArrayUC.length ; i ++)
+      {
+        tempArrayUC[i] = upper[i] + upper[i*2] + upper[i*3] + upper[i * 4] + upper[i * 4] + upper[i * 5] + upper[i * 6] + upper[i * 7] ;
+      } 
+   
+    File fileName2 = new File("Upperpw.txt"); 
+    PrintWriter outFile2 = new PrintWriter(fileName2); // makes one new file
+
+    for (int loop = 0; loop < tempArrayUC.length ; loop++) 
+    {
+      outFile2.println(tempArrayUC[loop]);
+    } // end for loop
+
+    outFile2.close(); // close the file when finished
+    }
   
+  //__________________________________________________________________//
+
+  if(input == 3) // mixed letters passwords
+    { 
+
+      String[] tempArrayML = new String[125];
+      
+      for(int i = 0 ; i < tempArrayML.length ; i ++)
+      {
+        tempArrayML[i] = mixed[i] + mixed[i*2] + mixed[i*3] + mixed[i * 4] + mixed[i * 4] + mixed[i * 5] + mixed[i * 6] + mixed[i * 7] ;
+      } 
+   
+    File fileName3 = new File("Mixedpw.txt"); 
+    PrintWriter outFile3 = new PrintWriter(fileName3); // makes one new file
+
+    for (int loop = 0; loop < tempArrayML.length ; loop++) 
+    {
+      outFile3.println(tempArrayML[loop]);
+    } // end for loop
+
+    outFile3.close(); // close the file when finished
+    }
   
-  
-  
-  
+//__________________________________________________________________//
+
+if(input == 4) // mixed letters and numbers passwords
+    { 
+
+      String[] tempArrayMLN = new String[125];
+      
+      for(int i = 0 ; i < tempArrayMLN.length ; i ++)
+      {
+        tempArrayMLN[i] = mixedNum[i] + mixedNum[i*2] + mixedNum[i*3] + mixedNum[i * 4] + mixedNum[i * 4] + mixedNum[i * 5] + mixedNum[i * 6] + mixedNum[i * 7] ;
+      } 
+   
+    File fileName4 = new File("MixedNumpw.txt"); 
+    PrintWriter outFile4 = new PrintWriter(fileName4); // makes one new file
+
+    for (int loop = 0; loop < tempArrayMLN.length ; loop++) 
+    {
+      outFile4.println(tempArrayMLN[loop]);
+    } // end for loop
+
+    outFile4.close(); // close the file when finished
+    }
+
+//__________________________________________________________________//
+
+if(input == 5) //all characters passwords
+    { 
+
+      String[] tempArrayAC = new String[125];
+      
+      for(int i = 0 ; i < tempArrayAC.length ; i ++)
+      {
+        tempArrayAC[i] = allChars[i] + allChars[i*2] + allChars[i*3] + allChars[i * 4] + allChars[i * 4] + allChars[i * 5] + allChars[i * 6] + allChars[i * 7] ;
+      } 
+   
+    File fileName5 = new File("AllCharspw.txt"); 
+    PrintWriter outFile5 = new PrintWriter(fileName5); // makes one new file
+
+    for (int loop = 0; loop < tempArrayAC.length ; loop++) 
+    {
+      outFile5.println(tempArrayAC[loop]);
+    } // end for loop
+
+    outFile5.close(); // close the file when finished
+    }
+
   }
 } 
