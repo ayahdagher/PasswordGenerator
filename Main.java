@@ -197,15 +197,16 @@ class Main {
       allChars[k] = Character.toString((char)allCharsInts[k]);
     }
 
-    // menu for generating passwords
+    // menu for generating passwords. using a flag to see if user wants to keep on generating
 
-    System.out.println("Welcome to the password generator! Here, you can generate thousands of passwords safely stored in a txt file. Please select which type of password you would like to generate! \n \n 1. Lowercase letters \n 2. Uppercase letters \n 3. Uppercase and Lowercase letters \n 4. Uppercase, Lowercase, and Numbers \n 5. Uppercase, Lowercase, Numbers and Symbols \n 0. Exit \n \n Enter Selection by typing numbers 1, 2 ,3 ,4, 5 or 0 to Exit:");
+
+    System.out.println("Welcome to the password generator! Here, you can generate thousands of passwords safely stored in a txt file. Please select which type of password you would like to generate! \n \n 1. Lowercase letters \n 2. Uppercase letters \n 3. Uppercase and Lowercase letters \n 4. Uppercase, Lowercase, and Numbers \n 5. Uppercase, Lowercase, Numbers and Symbols \n 0. Exit \n \n Enter Selection by typing numbers 1, 2, 3, 4, 5, or 0 to Exit:");
   
     Scanner scan = new Scanner(System.in); 
 
     int input = scan.nextInt(); 
 
-    if(input == 0)
+  if(input == 0)
     {
         System.out.println("Program ended. Have a nice day!");
     }
@@ -324,7 +325,12 @@ if(input == 5) //all characters passwords
     } // end for loop
 
     outFile5.close(); // close the file when finished
+   
     }
 
-  }
-} 
+   scan.close();
+
+
+    }
+
+  } 
