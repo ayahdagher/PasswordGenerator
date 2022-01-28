@@ -199,7 +199,10 @@ class Main {
 
     // menu for generating passwords. using a flag to see if user wants to keep on generating
 
+boolean flag  = true ; 
 
+while(flag == true)
+{
     System.out.println("Welcome to the password generator! Here, you can generate thousands of passwords safely stored in a txt file. Please select which type of password you would like to generate! \n \n 1. Lowercase letters \n 2. Uppercase letters \n 3. Uppercase and Lowercase letters \n 4. Uppercase, Lowercase, and Numbers \n 5. Uppercase, Lowercase, Numbers and Symbols \n 0. Exit \n \n Enter Selection by typing numbers 1, 2, 3, 4, 5, or 0 to Exit:");
   
     Scanner scan = new Scanner(System.in); 
@@ -327,10 +330,9 @@ if(input == 5) //all characters passwords
     outFile5.close(); // close the file when finished
    
     }
-
-   scan.close();
-
-
-    }
-
+ 
+  System.out.println("Would you like to generate more passwords? Enter true or false.");
+  flag = scan.nextBoolean() ; 
+  }
+  }
   } 
